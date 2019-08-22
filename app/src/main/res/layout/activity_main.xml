@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    >
+    // help with relative layout came from https://developer.android.com/guide/topics/ui/layout/relative
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="15dp"
+        android:text="Bill Calculator"
+        android:id="@+id/header"
+        android:textSize="40sp"
+        />
+
+    <TextView
+        android:id="@+id/question1"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"
+        android:text="How much was your bill?"
+        android:layout_alignParentLeft="true"
+        android:textSize="30sp"
+        android:layout_marginLeft="15dp"/>
+
+    <EditText
+        android:id="@+id/billInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/question2"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/billInput"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="70dp"
+        android:text="How much do you want to tip (percent)?"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/tipInput"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/billInput"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/question2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:onClick="calculate"
+        android:text="Calculate Bill"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_alignEnd="@+id/button"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="15dp"
+        android:text="Your bill will be:"
+        android:textSize="30sp" />
+
+</RelativeLayout>
